@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale= 1.0">
+        <title>My Portfolio</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Segoe', sans-serif;
+                background: linear-gradient(to right, #eef2f3, #ffffff);
+            }
+            header {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                padding: 40px 20px;
+                text-align:center;
+            }
+            header h1{
+                margin: 0;
+                font-size: 32px;
+            }
+            nav {
+                background: #333;
+                padding: 12px;
+                text-align: center;
+            }
+            nav a {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            nav a hover {
+                color: #ffd369;
+            }
+            section {
+                padding: 40px 20px;
+                max-width: 800px;
+                margin: auto;
+            }
+            h2 {
+                margin-bottom: 20px;
+                color:#333;
+            }
+            .card {
+                background: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0,0,o,0.1);
+                transition: 0.3s;
+            }
+            .card:hover {
+                transform: translateY(-5px);
+            }
+            .projects {
+                display:grid;
+                gap:20px;
+            }
+            footer {
+                background: #222;
+                color:white;
+                text-align: center;
+                padding:15px;
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>ROWSHON AKTER SATHI</h1>
+            <P>Junior Web Developer</P>
+        </header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>I am a computer Science graduate with a strong interest in web development, 
+                Currently working in Japan, Alongside my full-time job, I am dedicated to learning 
+                web development and building real-world projects. i am developing my skills in HTML, CSS, and JavaScript
+                and aiming to become a full-stack developer. 
+                I am passionate, hardworking, and ready to start my IT career. 
+             </p>
+        </section>
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+            <p>HTML & CSS - Building responsive websites</p>
+            <p>JavaScript - Currently learning and building projects</p>
+            <p>GitHub - Project management and hosting</p>
+            <p> Japanese - Currently studying N4, (Target: JLPT N2)</p>
+        </section>
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>Recipe Website</h3>
+                    <p>A recipe website showcasing international cuisins such as Bangladeshi,
+                        Chinese, Japanese, Indonesian, Turkish etc. with ingredients and cooking steps. 
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>Email: rowshonaktersathi61@gmail.com</p>
+        </section>
+        <footer>
+            <p>&copy; 2022-2026 Rowshon Akter Sathi. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>
