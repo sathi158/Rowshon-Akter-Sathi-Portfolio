@@ -4,113 +4,140 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial scale= 1.0">
         <title>My Portfolio</title>
-        <style>
-            body {
-                margin: 0;
-                font-family: 'Segoe', sans-serif;
-                background: linear-gradient(to right, #eef2f3, #ffffff);
-            }
-            header {
-                background: linear-gradient(135deg, #667eea, #764ba2);
-                color: white;
-                padding: 40px 20px;
-                text-align:center;
-            }
-            header h1{
-                margin: 0;
-                font-size: 32px;
-            }
-            nav {
-                background: #333;
-                padding: 12px;
-                text-align: center;
-            }
-            nav a {
-                color: white;
-                margin: 0 15px;
-                text-decoration: none;
-                font-weight: bold;
-            }
-            nav a hover {
-                color: #ffd369;
-            }
-            section {
-                padding: 40px 20px;
-                max-width: 800px;
-                margin: auto;
-            }
-            h2 {
-                margin-bottom: 20px;
-                color:#333;
-            }
-            .card {
-                background: white;
-                padding: 20px;
-                border-radius: 12px;
-                box-shadow: 0 5px 15px rgba(0,0,o,0.1);
-                transition: 0.3s;
-            }
-            .card:hover {
-                transform: translateY(-5px);
-            }
-            .projects {
-                display:grid;
-                gap:20px;
-            }
-            footer {
-                background: #222;
-                color:white;
-                text-align: center;
-                padding:15px;
-                margin-top: 30px;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </head>
     <body>
-        <header>
-            <h1>ROWSHON AKTER SATHI</h1>
-            <P>Junior Web Developer</P>
+            <header class="hero">
+    <div class="hero-text">
+        <h3>Hello, I'm</h3>
+        <h1>Rowshon Akter Sathi</h1>
+        <h2>Future Full Stack Developer</h2>
+        <p id="hero-text">
+            Computer Science Graduate currently working in Japan.
+            Passionate about Web Development, Cloud Computing,
+            and Japanese Language.
+        </p >
+        <a href=" " class="btn">Download CV</a >
+        <a href="#contact" class="btn-outline">Contact Me</a >
+    </div>
+    <div class="hero-image">
+        <img src="images/profileimage.jpg" alt="Profile Photo">
+    </div>
         </header>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+
+        <nav class="navbar">
+    <div class="logo">
+        Rowshon Akter Sathi
+    </div>
+    <ul class="nav-menu">
+        <li><a href=" ">About</a ></li>
+        <li><a href="#skills">Skills</a ></li>
+        <li><a href="#projects">Projects</a ></li>
+        <li><a href="#contact">Contact</a ></li>
+        <li>
+            <button class="lang-btn" onclick="changeLanguage()">
+               🌐 EN | 日本語
+            </button>
+        </li>
+
+    </ul>
+
         </nav>
         <section id="about" class="card">
-            <h2>About Me</h2>
-            <p>I am a computer Science graduate with a strong interest in web development, 
-                Currently working in Japan, Alongside my full-time job, I am dedicated to learning 
-                web development and building real-world projects. i am developing my skills in HTML, CSS, and JavaScript
-                and aiming to become a full-stack developer. 
-                I am passionate, hardworking, and ready to start my IT career. 
-             </p>
-        </section>
+    <h2 id="about-title">About Me</h2>
+    <div class="about-container">
+        <div class="about-left">
+            <h3>Who I Am</h3>
+            <p id="about-text">
+                I am a Computer Science graduate currently living and working in Japan under an Engineering Visa.
+                Alongside my full-time job, I am continuously learning modern web development and improving my Japanese language skills.
+                My goal is to build a successful career as a Full Stack Developer in Japan.
+            </p >
+        </div>
+        <div class="about-right">
+            <h3>Quick Information</h3>
+            <p><strong>🎓 Degree:</strong> Bachelor of Computer Science</p >
+            <p><strong>📍 Location:</strong> Tokyo, Japan</p >
+            <p><strong>💼 Current Role:</strong> Engineering Visa Holder</p >
+            <p><strong>💻 Career Goal:</strong> Full Stack Developer</p >
+            <p><strong>🇯🇵 Japanese:</strong> Target JLPT N2</p >
+        </div>
+    </div>
+</section>
+       
         <section id="skills" class="card">
-            <h2>Skills</h2>
-            <p>HTML & CSS - Building responsive websites</p>
-            <p>JavaScript - Currently learning and building projects</p>
-            <p>GitHub - Project management and hosting</p>
-            <p> Japanese - Currently studying N4, (Target: JLPT N2)</p>
-        </section>
+    <h2 id="skills-title">Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <i class="fa-brands fa-html5"></i>
+            <h3>HTML5</h3>
+            <p>Semantic and Responsive Web Structure</p >
+        </div>
+        <div class="skill-card">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h3>CSS3</h3>
+            <p>Modern Layouts and Responsive Design</p >
+        </div>
+        <div class="skill-card">
+            <i class="fa-brands fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>Currently Learning</p >
+        </div>
+        <div class="skill-card">
+            <i class="fa-brands fa-github"></i>
+            <h3>Git & GitHub</h3>
+            <p>Version Control & Project Hosting</p >
+        </div>
+        <div class="skill-card">
+            <i class="fa-brands fa-aws"></i>
+            <h3>AWS</h3>
+            <p>Cloud Computing (Learning)</p >
+        </div>
+        <div class="skill-card">
+            <i class="fa-brands fa-microsoft"></i>
+            <h3>Microsoft Azure</h3>
+            <p>Cloud Platform (Learning)</p >
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-language"></i>
+            <h3>Japanese</h3>
+            <p>Target: JLPT N2</p >
+        </div>
+    </div>
+</section>
         <section id="projects" class="card">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="card">
-                    <h3>Recipe Website</h3>
-                    <p>A recipe website showcasing international cuisins such as Bangladeshi,
-                        Chinese, Japanese, Indonesian, Turkish etc. with ingredients and cooking steps. 
-                    </p>
-                </div>
-            </div>
-        </section>
+    <h2 id="projects-title">Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <!-- < img src="images/recipe.png" alt="Recipe Website"> -->
+            <h3>Recipe Website</h3>
+            <p>
+                A responsive recipe website featuring Bangladeshi, Chinese,
+                Japanese, Indonesian, Turkish, and other international cuisines.
+            </p >
+            <a href=" ">Live Demo</a >
+            <a href="#">GitHub</a >
+        </div>
+        <div class="project-card">
+            <!-- < img src="images/portfolio.png" alt="Portfolio Website"> -->
+            <h3>Portfolio Website</h3>
+            <p>
+                A modern portfolio website showcasing my education,
+                skills, projects, and career goals.
+            </p >
+            <a href="#">Live Demo</a >
+            <a href="#">GitHub</a >
+        </div>
+    </div>
+</section>
         <section id="contact" class="card">
-            <h2>Contact</h2>
+            <h2 id="contact-title">Contact</h2>
             <p>Email: rowshonaktersathi61@gmail.com</p>
         </section>
         <footer>
             <p>&copy; 2022-2026 Rowshon Akter Sathi. All rights reserved.</p>
         </footer>
-
+    <script src="script.js"></script>
     </body>
 </html>
