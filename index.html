@@ -4,70 +4,119 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial scale= 1.0">
         <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </head>
     <body>
-            <header class="hero">
+            <header class="hero" id="home">
     <div class="hero-text">
-        <h3>Hello, I'm</h3>
+        <p class="hero-greeting" id="hero-greeting">
+            Hello, I'm
+        </p>
         <h1>Rowshon Akter Sathi</h1>
-        <h2>
-            Japanese Learner |
-            Full Stack Developer Learner |
+        <h2 id="hero-title">
+            Computer Science Graduate |
+            Full Stack Development Learner |
             Currently Working in Japan
         </h2>
         <p id="hero-text">
-            Computer Science Graduate currently working in Japan.
-            Passionate about Web Development, Cloud Computing, Azure, AWS
-            and Japanese Language.
-            My goal is to become a Full Stack Developer in Japan.
+            I am currently working in Japan while developing practical
+            skills in web development, cloud computing and Japanese.
+            My goal is to build a successful career as a Full Stack
+            Developer in Japan.
         </p >
-        <a href="#" class="btn">Download CV</a >
-        <a href="#contact" class="btn btn-outline">Contact Me</a >
+        <div class="hero-buttons">
+            <a
+                href="#projects" class="btn" id="view-projects-btn"> View Projects </a>
+            <a
+                href="#contact" class="btn btn-outline" id="contact-btn"> Contact Me </a>
+        </div>
+        <div class="hero-social">
+            <a
+                href="https://github.com/sathi158"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+                href="mailto:rowshonaktersathi61@gmail.com"
+                aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
     </div>
     <div class="hero-image">
-        <img src="images/profileimage.jpg" alt="Profile Photo">
+        <img
+            src="images/profileimage.jpg"
+            alt="Portrait of Rowshon Akter Sathi">
     </div>
-        </header>
+</header>
+
+
+<!-- Navigation -->
 
         <nav class="navbar">
     <div class="logo">
         Rowshon Akter Sathi
     </div>
     <ul class="nav-menu">
-        <li><a href=" ">About</a ></li>
-        <li><a href="#skills">Skills</a ></li>
-        <li><a href="#projects">Projects</a ></li>
-        <li><a href="#contact">Contact</a ></li>
+        <li><a href="#about" id="nav-about">About</a></li>
+        <li><a href="#skills" id="nav-skills">Skills</a></li>
+        <li><a href="#projects" id="nav-projects">Projects</a></li>
+        <li><a href="#experience" id="nav-experience">Experience</a></li>
+        <li><a href="#certifications" id="nav-certifications">Certifications</a></li>
+        <li><a href="#education" id="nav-education">Education</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
         <li>
             <button class="lang-btn" onclick="changeLanguage()">
-               🌐 EN | 日本語
+                🌐 EN | 日本語
             </button>
         </li>
-
     </ul>
+</nav>
 
-        </nav>
         <section id="about" class="card">
     <h2 id="about-title">About Me</h2>
     <div class="about-container">
         <div class="about-left">
-            <h3>Who I Am</h3>
+            <h3 id="who-i-am-title">Who I Am</h3>
             <p id="about-text">
                 I am a Computer Science graduate currently living and working in Japan under an Engineering Visa.
                 Alongside my full-time job, I am continuously learning modern web development and improving my Japanese language skills.
                 My goal is to build a successful career as a Full Stack Developer in Japan.
             </p >
         </div>
+        
+        <!-- Quick Information -->
+
         <div class="about-right">
-            <h3>Quick Information</h3>
-            <p><strong>🎓 Degree:</strong> Bachelor of Computer Science</p >
-            <p><strong>📍 Location:</strong> Tokyo, Japan</p >
-            <p><strong>💼 Current Role:</strong> Engineering Visa Holder</p >
-            <p><strong>💻 Career Goal:</strong> Full Stack Developer</p >
-            <p><strong>🇯🇵 Japanese:</strong> Target JLPT N2</p >
-        </div>
+    <h3 id="quick-info-title">Quick Information</h3>
+    <p>
+        <strong id="degree-label">🎓 Degree:</strong>
+        <span id="degree-value">Bachelor of Computer Science</span>
+    </p >
+    <p>
+        <strong id="location-label">📍 Location:</strong>
+        <span id="location-value">Tokyo, Japan</span>
+    </p >
+    <p>
+        <strong id="status-label">💼 Current Status:</strong>
+        <span id="status-value">Working in Japan</span>
+    </p >
+    <p>
+        <strong id="goal-label">🎯 Career Goal:</strong>
+        <span id="goal-value">Full Stack Developer</span>
+    </p >
+    <p>
+        <strong id="learning-label">☁️ Learning:</strong>
+        <span id="learning-value">AWS • Azure • JavaScript</span>
+    </p >
+    <p>
+        <strong id="japanese-label">🇯🇵 Japanese:</strong>
+        <span id="japanese-value">Preparing for JLPT N2</span>
+    </p >
+</div>
     </div>
 </section>
        
@@ -111,90 +160,229 @@
         </div>
     </div>
 </section>
+
+<!-- Project section -->
         <section id="projects" class="card">
     <h2 id="projects-title">Projects</h2>
     <div class="projects-container">
+        <!-- Japanese Standard CV Maker -->
+        <article class="project-card featured-project">
+            <img
+                src="images/cv-maker.png"
+                alt="Japanese Standard CV Maker Screenshot">
+            <div class="project-content">
+                <span class="project-badge" id="featured-project">Featured Project</span>
+                <h3 id="cv-project-title">Japanese Standard CV Maker</h3>
+                <p id="cv-project-description">
+                    A bilingual web application for creating a
+                    Japanese-standard resume (履歴書). Users can enter
+                    personal information, education, work history and
+                    qualifications, preview the resume instantly and
+                    download it as a PDF.
+                </p >
+                <p class="project-url">
+                    <strong id="project-website-label">Website:</strong>
+                    <br>
+                    <a
+                        href="https://sathi158.github.io/Japanese-standard-CV-maker/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        sathi158.github.io/Japanese-standard-CV-maker/
+                    </a >
+                </p >
+                <div class="project-tech">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>PDF</span>
+                </div>
+                <div class="project-links">
+                    <a
+                        href="https://sathi158.github.io/Japanese-standard-CV-maker/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-btn"
+                        id="cv-live-demo">
+                        Live Demo
+                    </a>
+                    <a
+                        href="https://github.com/sathi158/Japanese-standard-CV-maker"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-btn project-btn-outline"
+                        id="cv-github">
+                        GitHub
+                    </a >
+                </div>
+            </div>
+        </article>
+        <!-- Portfolio Website -->
+        <article class="project-card">
 
-        <div class="project-card featured-project">
+            <img
+                src="images/portfolio.png"
+                alt="Portfolio Website Preview">
+            <div class="project-content">
+                <h3 id="portfolio-project-title">Portfolio Website</h3>
+                <p id="portfolio-project-description">
+                    A bilingual personal portfolio website showcasing
+                    my professional background, technical skills,
+                    projects and career goals in Japan.
+                </p >
+                <div class="project-tech">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>GitHub Pages</span>
+                </div>
+                <div class="project-links">
+                    <a
+                        href="https://sathi158.github.io/Rowshon-Akter-Sathi-Portfolio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-btn"
+                        id="portfolio-live-demo">
+                        Live Demo
+                    </a >
+                    <a
+                        href="https://github.com/sathi158/Rowshon-Akter-Sathi-Portfolio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-btn project-btn-outline"
+                        id="portfolio-github">
+                        GitHub
+                    </a >
+                </div>
+            </div>
+        </article>
+        <!-- Recipe Website -->
+        <article class="project-card">
 
-    <!-- পরে Project Screenshot যোগ করবেন -->
-    <!--
-    <img
-        src="images/cv-maker.png"
-        alt="Japanese Standard CV Maker"
-    >
-    -->
-    <div class="project-content">
-        <span class="project-badge">Featured Project</span>
-        <h3>Japanese Standard CV Maker</h3>
-        <p>
-    A bilingual web application for creating a Japanese-standard
-    resume (履歴書). Users can enter personal information, education,
-    work history, qualifications, and other details, preview the
-    resume instantly, and download it as a PDF.
-</p >
-<p class="project-url">
-    <strong>Website:</strong><br>
-    <a
-        href=" "
-        target="_blank"
-        rel="noopener noreferrer" >
-        sathi158.github.io/Japanese-standard-CV-maker/
-    </a >
-</p >
-        <div class="project-tech">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-        </div>
-        <div class="project-links">
-            <a
-                href="https://github.com/sathi158/Japanese-standard-CV-maker/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-btn">
-                Live Demo
-            </a >
-            <a
-                href="https://github.com/sathi158/Japanese-standard-CV-maker"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-btn project-btn-outline" >
-                GitHub
-            </a >
-        </div>
+            <!--
+            <img
+                src="images/recipe.png"
+                alt="Recipe Website Preview">
+            -->
+            <div class="project-content">
+                <span class="project-status" id="recipe-status">
+                    Planned Project
+                </span>
+                <h3 id="recipe-project-title">International Recipe Website</h3>
+                <p id="recipe-project-description">
+                    A responsive recipe website featuring Bangladeshi,
+                    Chinese, Japanese, Indonesian, Turkish and other
+                    international cuisines with ingredients and
+                    step-by-step cooking instructions.
+                </p >
+                <div class="project-tech">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a
+                        href="#"
+                        class="project-btn disabled-btn"
+                        aria-disabled="true"
+                        id="recipe-coming-soon">
+                        Coming Soon
+                    </a >
+                </div>
+            </div>
+        </article>
     </div>
-</div>
-        <div class="project-card">
-            <!-- < img src="images/portfolio.png" alt="Portfolio Website"> -->
-            <h3>Portfolio Website</h3>
-            <p>
-                A modern portfolio website showcasing my education,
-                skills, projects, and career goals.
-            </p >
-            <a href="#" class="project-btn">Live Demo</a >
-            <a href="#" class="project-btn project-btn-outline">GitHub</a >
+</section>
+
+  <!-- Experience section -->
+<section id="experience" class="card">
+    <h2 id="experience-title">Work Experience</h2>
+    <div class="experience-item">
+        <h3 id="experience-role">
+            Team Coordination and Management Support
+        </h3>
+        <p class="experience-location" id="experience-location">
+            Currently Working in Japan
+        </p >
+        <ul>
+            <li id="experience-point-1">
+                Coordinating communication between Japanese staff and Bangladeshi employees.
+            </li>
+            <li id="experience-point-2">
+                Supporting translation and interpretation for daily workplace communication.
+            </li>
+            <li id="experience-point-3">
+                Assisting with shift coordination, employee support, and operational management.
+            </li>
+            <li id="experience-point-4">
+                Developing cross-cultural communication, leadership, and problem-solving skills.
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Education Section -->
+   <section id="education" class="card">
+    <h2 id="education-title">Education</h2>
+    <div class="education-item">
+        <h3 id="education-degree">Bachelor of Computer Science</h3>
+        <p class="education-school" id="education-subtitle">
+            Computer Science Graduate </p>
+        <p id="education-description">
+            Completed Bachelor's degree in Computer Science.
+            Developed a strong foundation in programming,
+            databases, networking and software engineering.
+        </p >
+    </div>
+</section>
+
+<!-- Certification Section -->
+
+<section id="certifications" class="card">
+    <h2 id="certifications-title">
+        Certifications & Achievements</h2>
+    <div class="certification-container">
+        <div class="cert-card">
+            <h3 id="award-title">🏆 Second Prize</h3>
+            <p id="award-name">
+                2022 Live Streaming of Sichuan Export Commodities Challenge</p>
+            <p id="award-country">China</p>
         </div>
-        <div class="project-card">
-            <!-- < img src="images/recipe.png" alt="Recipe Website"> -->
-            <h3>Recipe Website</h3>
-            <p>
-                A responsive recipe website featuring Bangladeshi, Chinese,
-                Japanese, Indonesian, Turkish, and other international cuisines.
-            </p >
-            <a href=" " class="project-btn">Live Demo</a >
-            <a href="#" class="project-btn project-btn-outline">GitHub</a >
+        <div class="cert-card">
+            <h3 id="aws-title">☁ AWS Cloud Practitioner</h3>
+            <p id="aws-status"> Currently Learning</p>
         </div>
-        
+        <div class="cert-card">
+            <h3 id="azure-title"> ☁ Microsoft Azure</h3>
+            <p id="azure-status">Currently Learning</p>
+        </div>
+        <div class="cert-card">
+            <h3 id="jlpt-title">🇯🇵 JLPT N2</h3>
+            <p id="jlpt-status"> Preparing </p>
+        </div>
     </div>
 </section>
         <section id="contact" class="card">
             <h2 id="contact-title">Contact</h2>
             <p>Email: rowshonaktersathi61@gmail.com</p>
         </section>
-        <footer>
-            <p>&copy; 2022-2026 Rowshon Akter Sathi. All rights reserved.</p>
-        </footer>
-    <script src="script.js"></script>
+
+  <!-- Footer Section -->
+     <footer class="footer">
+            <h3>Rowshon Akter Sathi</h3>
+            <p id="footer-role"> Full Stack Development Learner</p>
+    <div class="footer-links">
+        <a
+            href="https://github.com/sathi158"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub</a>
+        <a href="mailto:rowshonaktersathi61@gmail.com">Email</a>
+    </div>
+    <p class="copyright" id="footer-copyright">
+         © 2026 Rowshon Akter Sathi. All rights reserved.</p>
+</footer>
+        <script src="js/language.js"></script>
+        <script src="js/script.js"></script>
+
     </body>
 </html>
